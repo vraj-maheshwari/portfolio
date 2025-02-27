@@ -58,23 +58,23 @@ body {
 
 .carousel-item img {
     width: 100%;
-    height: auto; /* Make height auto to maintain aspect ratio */
-    object-fit: contain; /* Ensure the image fits within the container */
+    height: auto; 
+    object-fit: contain; 
     border-radius: 10px;
 }
 
-/* Ensuring that on smaller screens, the carousel images fill their container */
+
 @media (max-width: 768px) {
     .carousel-item img {
-        height: auto; /* Let the height adjust automatically */
-        max-height: 500px; /* Limit the height for mobile screens */
+        height: auto; 
+        max-height: 500px; 
     }
 }
 
 @media (max-width: 576px) {
     .carousel-item img {
-        height: auto; /* Let the height adjust automatically */
-        max-height: 350px; /* Further reduce max-height on very small screens */
+        height: auto; 
+        max-height: 350px; 
     }
 }
 
@@ -93,16 +93,16 @@ body {
 }
 
 .certificate-item {
-    flex: 1 1 calc(33% - 20px); /* Adjust to 33% for larger screens */
-    max-width: calc(33% - 20px); /* Ensure the certificates do not shrink too much */
+    flex: 1 1 calc(33% - 20px); 
+    max-width: calc(33% - 20px); 
     text-align: center;
     margin-bottom: 20px;
 }
 
 .certificate-item img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    max-height: 300px; /* Set a max-height for better visibility */
+    height: auto;
+    max-height: 300px; 
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -159,7 +159,7 @@ section {
     }
 
     .certificate-item {
-        flex: 1 1 calc(50% - 20px); /* Adjust to 50% for smaller screens */
+        flex: 1 1 calc(50% - 20px); 
         max-width: calc(50% - 20px);
     }
 }
@@ -185,11 +185,11 @@ section {
     }
 
     .certificate-item {
-        flex: 1 1 100%; /* Stack certificates on small screens */
+        flex: 1 1 100%; 
         max-width: 100%;
     }
 
     .certificate-item img {
-        max-height: 250px; /* Adjust max height for smaller screens */
+        max-height: 250px; 
     }
 }
