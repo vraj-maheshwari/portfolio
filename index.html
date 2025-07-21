@@ -3,158 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Vraj Maheshwari Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f8f9fa;
-        }
-        .sidebar {
-            height: 100vh;
-            width: 260px;
-            position: fixed;
-            background: linear-gradient(45deg, #6a11cb, #2575fc);
-            padding-top: 20px;
-            color: white;
-            text-align: center;
-        }
-        .sidebar a {
-            padding: 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            display: block;
-            transition: background 0.3s;
-        }
-        .sidebar a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-        }
-        .content {
-            margin-left: 270px;
-            padding: 20px;
-            position: relative;
-        }
-        .profile-picture {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .name-section {
-            position: absolute;
-            top: 20px;
-            right: 140px;
-            background: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .carousel-item img {
-            width: 100%;
-            height: 800px;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-        .contact-card {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .certifications {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .certificate-item {
-            flex: 1 1 calc(50% - 20px);
-            max-width: calc(50% - 20px);
-            text-align: center;
-        }
-        .certificate-item img {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .portfolio-title {
-            text-align: center;
-            margin-top: 150px;
-            font-size: 40px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        /* Section Styling */
-        .section-title {
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #2575fc; /* Add line under section title */
-            color: #2575fc;
-        }
-
-        section {
-            background-color: white;
-            padding: 40px;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Dividing Line for Sections */
-        .section-divider {
-            border-top: 2px solid #2575fc;
-            margin-top: 40px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="sidebar">
+        <a href="#summary">Summary</a>
         <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#certifications">Certifications</a>
+        <a href="#extras">Extra-Curriculars</a>
         <a href="#contact">Contact</a>
     </div>
-    
-    <div class="content">
 
+    <div class="content">
         <div class="portfolio-title">
-            <h1>Portfolio</h1>
+            <h1>Vraj Maheshwari</h1>
+            <p>Passionate Software Developer</p>
         </div>
 
         <div class="name-section">Maheshwari Vraj</div>
-        <img src="D:/portfolio/vraj.jpg" alt="Profile Picture" class="profile-picture">
-        
+        <img src="vraj.jpg" alt="Profile Picture" class="profile-picture img-fluid">
+
+        <section id="summary">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>
+                Final-year B.Tech student in Agricultural Information Technology with strong software development skills.
+                Passionate about AI/ML, Cybersecurity, and Full-Stack Development. Seeking to contribute and grow in a software development role.
+            </p>
+        </section>
+
+        <div class="section-divider"></div>
+
         <section id="education">
             <h2 class="section-title">Education</h2>
             <div class="row">
                 <div class="col-md-6">
                     <h4>Schooling</h4>
                     <p><strong>Institution:</strong> New English School, Nadiad</p>
-                    <p><strong>Level:</strong> 1st to 12th grade</p>
-                    <p><strong>Achievement:</strong> Completed schooling with 97 percentile in 12th grade.</p>
+                    <p><strong>Years:</strong> 2010–2021</p>
+                    <p><strong>Achievement:</strong> 97 percentile in 12th grade</p>
                 </div>
                 <div class="col-md-6">
                     <h4>Higher Education</h4>
-                    <p><strong>Institution:</strong> Anand Agricultural University, Anand</p>
+                    <p><strong>Institution:</strong> College of Agricultural Information Technology, AAU</p>
                     <p><strong>Program:</strong> B.Tech in Agricultural Information Technology</p>
-                    <p><strong>Current Semester:</strong> 6th semester</p>
-                    <p><strong>Last Semester Result:</strong> 8.22 OGPA</p>
+                    <p><strong>Duration:</strong> 2022–2026</p>
+                    <p><strong>Current OGPA:</strong> 8.22</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="experience">
+            <h2 class="section-title">Work Experience</h2>
+            <h4>Trainee – Code Crafters Program</h4>
+            <p><strong>Company:</strong> Sarjen Systems Pvt. Ltd., Ahmedabad</p>
+            <p><strong>Duration:</strong> Apr–May 2025 (Weekends)</p>
+            <p>Hands-on training in HTML, CSS, JavaScript, React.js with practical assignments under Mr. Akash Padhiyar.</p>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Technical Skills</h5>
+                    <ul>
+                        <li>Python, Java, PHP, SQL</li>
+                        <li>React.js, Bootstrap, .NET Core MVC</li>
+                        <li>AI/ML: Pandas, Scikit-learn, OpenCV, YOLO</li>
+                        <li>MERN Stack (Currently Learning)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Soft Skills</h5>
+                    <ul>
+                        <li>Team Work, Leadership, Adaptability</li>
+                        <li>Communication, Quick Learner</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -164,69 +97,77 @@
         <section id="projects">
             <h2 class="section-title">Projects</h2>
             <h3>Leave Application Management System</h3>
+            <h5>
+                <li>Web-based leave portal for students and admins</li>
+                <li> PHP + Bootstrap frontend, SQL Server backend</li>
+                <li>SMTP email alerts to parents</li>
+                <li>IP logging for enhanced login security</li>
+            </h5>
             <div id="project1Carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
+               
                     <div class="carousel-item active">
-                        <img src="D:/portfolio/project1/s1.png" alt="Leave Application Management System">
+                        <img src="project1/s1.png" class="d-block w-100" alt="Slide 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s2.png" alt="Leave Application Management System">
+                        <img src="project1/s2.png" class="d-block w-100" alt="Slide 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s3.png" alt="Leave Application Management System">
+                        <img src="project1/s3.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s4.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s4.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s5.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s5.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s6.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s6.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s7.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s7.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s8.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s8.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s9.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s9.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s10.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s10.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s11.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s11.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s12.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s12.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s13.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s13.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s14.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s14.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s15.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s15.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s16.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s16.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s17.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s17.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s18.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s18.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s19.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s19.png" class="d-block w-100" alt="Slide 3">
                     </div>
-                    <div class="carousel-item">
-                        <img src="D:/portfolio/project1/s20.png" alt="Leave Application Management System">
+                     <div class="carousel-item">
+                        <img src="project1/s20.png" class="d-block w-100" alt="Slide 3">
                     </div>
                     
+                  
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#project1Carousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -235,26 +176,94 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </button>
             </div>
-            
+
             <h3 class="mt-4">Facial Recognition Attendance System</h3>
-            <p><strong>Status:</strong> In Working</p>
-            <p>A smart system for marking attendance using facial recognition.</p>
+            <h5>
+                <li>KNN model trained on 100+ images/student</li>
+                <li> Real-time facial detection with OpenCV & YOLO</li>
+                <li>Flask admin interface + secure SQL Server storage</li>
+                
+            </h5>
+            <div id="project2Carousel" class="carousel slide mt-3" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="project2/img1.png" class="d-block w-100" alt="FR Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="project2/img2.png" class="d-block w-100" alt="FR Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="project2/img3.png" class="d-block w-100" alt="FR Slide 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="project2/img4.png" class="d-block w-100" alt="FR Slide 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="project2/img5.png" class="d-block w-100" alt="FR Slide 5">
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <img src="project2/img7.png" class="d-block w-100" alt="FR Slide 7">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="project2/img8.png" class="d-block w-100" alt="FR Slide 8">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="project2/img9.png" class="d-block w-100" alt="FR Slide 9">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="project2/img10.png" class="d-block w-100" alt="FR Slide 10">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#project2Carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#project2Carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <h3 class="mt-4">Trainable Chatbot</h3>
+            <p><strong>Status:</strong> In Progress</p>
+            <p>Customizable chatbot built with Python and LLaMA 2, adaptable to specific domains or firms.</p>
         </section>
 
         <div class="section-divider"></div>
 
-        <section id="certifications">
+                <section id="certifications">
             <h2 class="section-title">Certifications</h2>
-            <div class="certifications">
-                <div class="certificate-item"><img src="D:/portfolio/certificate/img1.png" alt="Certification 1"></div>
-                <div class="certificate-item"><img src="D:/portfolio/certificate/img2.png" alt="Certification 2"></div>
-                <div class="certificate-item"><img src="D:/portfolio/certificate/img3.png" alt="Certification 3"></div>
-                <div class="certificate-item"><img src="D:/portfolio/certificate/img4.png" alt="Certification 4"></div>
-                <div class="certificate-item"><img src="D:/portfolio/certificate/img5.png" alt="Certification 5"></div>
-                <div class="certificate-item"><img src="D:/portfolio/certificate/img6.png" alt="Certification 6"></div>
-                <div class="certificate-item"><img src="D:/portfolio/certificate/img7.png" alt="Certification 7"></div>
-                <div class="certificate-item"><img src="D:/portfolio/certificate/img8.png" alt="Certification 7"></div>
+            <div class="row">
+                
+                
+                <div class="col-md-4"><img src="certificate/img2.png" class="img-fluid" alt="Certification 2"></div>
+                <div class="col-md-4"><img src="certificate/img3.png" class="img-fluid" alt="Certification 3"></div>
+                <div class="col-md-4"><img src="certificate/img4.png" class="img-fluid" alt="Certification 3"></div>
+                <div class="col-md-4"><img src="certificate/img5.png" class="img-fluid" alt="Certification 3"></div>
+                <div class="col-md-4"><img src="certificate/img6.png" class="img-fluid" alt="Certification 3"></div>
+                <div class="col-md-4"><img src="certificate/img7.png" class="img-fluid" alt="Certification 3"></div>
+                <div class="col-md-4"><img src="certificate/img8.png" class="img-fluid" alt="Certification 3"></div>
+                <div class="col-md-4"><img src="certificate/img9.png" class="img-fluid" alt="Certification 3"></div>
+                <div class="col-md-4"><img src="certificate/img10.png" class="img-fluid" alt="Certification 3"></div>
+                <div class="col-md-4"><img src="certificate/img11.jpeg" class="img-fluid" alt="Certification 3"></div>
+                <div class="col-md-4"><img src="certificate/img12.png" class="img-fluid" alt="Certification 3"></div>
+                <div class="col-md-4"><img src="certificate/img13.jpg" class="img-fluid" alt="Certification 3"></div>
+                <div class="col-md-4"><img src="certificate/img1.jpeg" class="img-fluid" alt="Certification 1"></div>
+                
+                
             </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="extras">
+            <h2 class="section-title">Extra-Curricular Activities</h2>
+            <ul>
+                <li>Gold Medalist – 4x100m Relay, University Athletics Meet</li>
+                <li>NCC ‘A’ Certificate Holder</li>
+                <li>Certified NSS Volunteer</li>
+                <li>Participant – National Hackathon, MITS Gwalior</li>
+                <li> NCC Annual Training Camp Certificate Holder</li>
+            </ul>
         </section>
 
         <div class="section-divider"></div>
@@ -263,8 +272,14 @@
             <h2 class="section-title">Contact Me</h2>
             <div class="contact-card">
                 <p><strong>Email:</strong> vrajmaheshwari06@gmail.com</p>
+                <p><strong>Phone:</strong> +91 9265635090</p>
+                <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/vraj-maheshwari-6537ba278" target="_blank">linkedin.com/in/vraj-maheshwari</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/vraj-maheshwari" target="_blank">github.com/vraj-maheshwari</a></p>
             </div>
         </section>
     </div>
+
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
