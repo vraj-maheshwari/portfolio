@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test</title>
+    <style>
+        img {
+            width: 200px;
+            height: 150px;
+            border: 2px solid red;
+            margin: 10px;
+            object-fit: cover;
+        }
+        .error {
+            background: #ffcccc;
+            color: red;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    
+    <h2>Project 1 Images</h2>
+    <img src="project1/s1.png" alt="s1.png" onload="console.log('s1.png loaded')" onerror="console.error('s1.png failed'); this.style.background='red';">
+    <img src="project1/s2.png" alt="s2.png" onload="console.log('s2.png loaded')" onerror="console.error('s2.png failed'); this.style.background='red';">
+    
+    <h2>Project 2 Images</h2>
+    <img src="project2/img1.png" alt="img1.png" onload="console.log('img1.png loaded')" onerror="console.error('img1.png failed'); this.style.background='red';">
+    
+    <script>
+        console.log('Test page loaded');
+        
+        // Check if images exist
+        const images = document.querySelectorAll('img');
+        images.forEach(img => {
+            console.log('Image src:', img.src);
+            console.log('Image complete:', img.complete);
+            console.log('Image naturalWidth:', img.naturalWidth);
+            console.log('Image naturalHeight:', img.naturalHeight);
+        });
+    </script>
+</body>
+</html>
