@@ -634,6 +634,18 @@ document.addEventListener("DOMContentLoaded", () => {
         'ai-chatbot': {
             title: 'Trainable AI/ML Chatbot',
             images: []
+        },
+        'port-scanner' :{
+            title: 'port-scanner',
+            images: [
+                'project4/Screenshot 2025-08-01 105104.png','project4/Screenshot 2025-08-01 110306.png'
+            ]
+        },
+        'ai-agent' :{
+            title: 'ai-agent',
+            images: [
+                'project5/s1.png','project5/s2.png','project5/s3.png','project5/s4.png','project5/s5.png'
+            ]
         }
     };
 
