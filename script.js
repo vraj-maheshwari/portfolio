@@ -650,8 +650,8 @@ document.addEventListener("DOMContentLoaded", () => {
         'nail-art': {
             title: 'Nail Art Studio Website',
             images: [
-                'project6/screenshot1.png', 'project6/screenshot2.png', 'project6/screenshot3.png',
-                'project6/screenshot4.png', 'project6/screenshot5.png'
+                'project6/Screenshot1.png', 'project6/Screenshot2.png', 'project6/Screenshot3.png',
+                'project6/Screenshot4.png', 'project6/Screenshot5.png'
             ]
         }
     };
