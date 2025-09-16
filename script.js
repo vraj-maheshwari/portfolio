@@ -4,13 +4,13 @@ console.log('Script loaded successfully');
 // Wait for DOM to be ready
 document.addEventListener("DOMContentLoaded", () => {
     console.log('DOM Content Loaded');
-    
+
     // Check if EmailJS is available
     if (typeof emailjs === 'undefined') {
         console.error('EmailJS is not loaded. Check if the script tag is correct.');
         return;
     }
-    
+
     // Initialize EmailJS
     try {
         emailjs.init('UxuBH0j_xRNfW7zFz');
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (notification) {
             notification.textContent = message;
             notification.className = `notification ${type} show`;
-            
+
             setTimeout(() => {
                 notification.classList.remove('show');
             }, 3000);
@@ -50,75 +50,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add multiple event listeners to debug the issue
     console.log('Adding submit event listener to form:', contactForm);
-    
+
     // Add a click listener to the submit button to debug
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     console.log('Submit button found:', submitBtn);
-    
+
     if (submitBtn) {
         submitBtn.addEventListener('click', (e) => {
             console.log('Submit button clicked');
             e.preventDefault();
             console.log('Default prevented on button click');
-            
+
             // Manually trigger form submission logic
             handleFormSubmission();
         });
     }
-    
+
     // Also keep the form submit listener
     contactForm.addEventListener('submit', (e) => {
         console.log('Form submitted via submit event');
         e.preventDefault();
         handleFormSubmission();
     });
-    
+
     function handleFormSubmission() {
-        
+
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
-        
+
         console.log('Form data:', { name, email, message });
-        
+
         if (!name || !email || !message) {
             console.log('Validation failed: missing fields');
             showNotification('Please fill in all fields', 'error');
             return;
         }
-        
+
         if (!validateEmail(email)) {
             console.log('Validation failed: invalid email');
             showNotification('Please enter a valid email address', 'error');
             return;
         }
-        
+
         // Show loading state
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
-        
+
         // Prepare template parameters
         const templateParams = {
             name: name,
             email: email,
             message: message
         };
-        
+
         console.log('Sending email with params:', templateParams);
-        
+
         // Send email using EmailJS
         emailjs.send('service_fgby901', 'template_2pz4w8i', templateParams)
-            .then(function(response) {
+            .then(function (response) {
                 console.log('Email sent successfully:', response);
                 showNotification('Message sent successfully!', 'success');
                 contactForm.reset();
-            }, function(error) {
+            }, function (error) {
                 console.error('Email send failed:', error);
                 showNotification('Failed to send message. Please try again.', 'error');
             })
-            .finally(function() {
+            .finally(function () {
                 // Reset button state
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener('mouseenter', () => {
             item.style.transform = 'translateY(-10px)';
         });
-        
+
         item.addEventListener('mouseleave', () => {
             item.style.transform = 'translateY(0)';
         });
@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function typeWriter(element, text, speed = 100) {
         let i = 0;
         element.innerHTML = '';
-        
+
         function type() {
             if (i < text.length) {
                 element.innerHTML += text.charAt(i);
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(type, speed);
             }
         }
-        
+
         type();
     }
 
@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const scrolled = window.pageYOffset;
         const hero = document.querySelector('.hero');
         const profileCard = document.querySelector('.profile-card');
-        
+
         if (hero && profileCard) {
             const rate = scrolled * -0.5;
             profileCard.style.transform = `translateY(${rate}px)`;
@@ -253,16 +253,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', () => {
         let current = '';
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            
+
             if (window.pageYOffset >= sectionTop - 200) {
                 current = section.getAttribute('id');
             }
         });
-        
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const target = parseInt(counter.textContent);
             const increment = target / 100;
             let current = 0;
-            
+
             const updateCounter = () => {
                 if (current < target) {
                     current += increment;
@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     counter.textContent = target + '+';
                 }
             };
-            
+
             updateCounter();
         });
     }
@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         }, { threshold: 0.5 });
-        
+
         aboutObserver.observe(aboutSection);
     }
 
@@ -331,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Skill Progress Animation
     function animateSkillProgress() {
         const skillItems = document.querySelectorAll('.skill-item');
-        
+
         skillItems.forEach((item, index) => {
             setTimeout(() => {
                 item.style.opacity = '1';
@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         }, { threshold: 0.3 });
-        
+
         skillsObserver.observe(skillsSection);
     }
 
@@ -360,7 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-10px) scale(1.02)';
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0) scale(1)';
         });
@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-5px) scale(1.05)';
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0) scale(1)';
         });
@@ -380,7 +380,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Timeline Animation
     function animateTimeline() {
         const timelineItems = document.querySelectorAll('.timeline-item');
-        
+
         timelineItems.forEach((item, index) => {
             setTimeout(() => {
                 item.style.opacity = '1';
@@ -400,7 +400,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         }, { threshold: 0.3 });
-        
+
         experienceObserver.observe(experienceSection);
     }
 
@@ -423,14 +423,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // Just ensure images are visible
         img.style.opacity = '1';
         img.style.transition = 'opacity 0.3s ease';
-        
+
         // Add error handling
         img.addEventListener('error', (e) => {
             console.error('Image failed to load:', img.src, e);
             img.style.background = '#f0f0f0';
             img.alt = 'Image not found';
         });
-        
+
         console.log('Project image processed:', img.src);
     });
 
@@ -443,7 +443,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img.addEventListener('load', () => {
                 img.style.opacity = '1';
             });
-            
+
             img.addEventListener('error', () => {
                 // If image fails to load, still make it visible after a delay
                 setTimeout(() => {
@@ -451,10 +451,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, 1000);
             });
         }
-        
+
         img.style.opacity = '0';
         img.style.transition = 'opacity 0.3s ease';
-        
+
         // Fallback: ensure images become visible after 2 seconds regardless
         setTimeout(() => {
             img.style.opacity = '1';
@@ -486,11 +486,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Just add hover effects for contact items
     document.querySelectorAll('.contact-item').forEach(item => {
         item.style.transition = 'transform 0.2s ease';
-        
+
         item.addEventListener('mouseenter', () => {
             item.style.transform = 'scale(1.02)';
         });
-        
+
         item.addEventListener('mouseleave', () => {
             item.style.transform = 'scale(1)';
         });
@@ -511,7 +511,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Performance optimization: Throttle scroll events
     function throttle(func, limit) {
         let inThrottle;
-        return function() {
+        return function () {
             const args = arguments;
             const context = this;
             if (!inThrottle) {
@@ -533,7 +533,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 navbar.style.background = 'rgba(255, 255, 255, 0.95)';
             }
         }
-        
+
         // Back to top button
         const backToTopBtn = document.getElementById('back-to-top');
         if (backToTopBtn) {
@@ -543,7 +543,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 backToTopBtn.classList.remove('show');
             }
         }
-        
+
         // Active navigation highlighting
         let current = '';
         sections.forEach(section => {
@@ -553,7 +553,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 current = section.getAttribute('id');
             }
         });
-        
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
@@ -568,13 +568,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (btn.closest('#contact-form')) {
             return;
         }
-        
-        btn.addEventListener('click', function() {
+
+        btn.addEventListener('click', function () {
             if (this.type === 'submit') {
                 const originalText = this.textContent;
                 this.textContent = 'Sending...';
                 this.disabled = true;
-                
+
                 setTimeout(() => {
                     this.textContent = originalText;
                     this.disabled = false;
@@ -585,20 +585,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add ripple effect to buttons
     document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
+        btn.addEventListener('click', function (e) {
             const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
             const size = Math.max(rect.width, rect.height);
             const x = e.clientX - rect.left - size / 2;
             const y = e.clientY - rect.top - size / 2;
-            
+
             ripple.style.width = ripple.style.height = size + 'px';
             ripple.style.left = x + 'px';
             ripple.style.top = y + 'px';
             ripple.classList.add('ripple');
-            
+
             this.appendChild(ripple);
-            
+
             setTimeout(() => {
                 ripple.remove();
             }, 600);
@@ -635,16 +635,23 @@ document.addEventListener("DOMContentLoaded", () => {
             title: 'Trainable AI/ML Chatbot',
             images: []
         },
-        'port-scanner' :{
+        'port-scanner': {
             title: 'port-scanner',
             images: [
-                'project4/Screenshot 2025-08-01 105104.png','project4/Screenshot 2025-08-01 110306.png'
+                'project4/Screenshot 2025-08-01 105104.png', 'project4/Screenshot 2025-08-01 110306.png'
             ]
         },
-        'ai-agent' :{
+        'ai-agent': {
             title: 'ai-agent',
             images: [
-                'project5/s1.png','project5/s2.png','project5/s3.png','project5/s4.png','project5/s5.png'
+                'project5/s1.png', 'project5/s2.png', 'project5/s3.png', 'project5/s4.png', 'project5/s5.png'
+            ]
+        },
+        'nail-art': {
+            title: 'Nail Art Studio Website',
+            images: [
+                'project6/screenshot1.png', 'project6/screenshot2.png', 'project6/screenshot3.png',
+                'project6/screenshot4.png', 'project6/screenshot5.png'
             ]
         }
     };
@@ -653,17 +660,17 @@ document.addEventListener("DOMContentLoaded", () => {
     function openProjectModal(projectType) {
         const project = projectImages[projectType];
         if (!project || !projectModal) return;
-        
+
         modalTitle.textContent = project.title;
         projectGallery.innerHTML = '';
-        
+
         project.images.forEach((imageSrc, index) => {
             const galleryItem = document.createElement('div');
             galleryItem.className = 'gallery-item';
             galleryItem.innerHTML = `<img src="${imageSrc}" alt="Project Screenshot ${index + 1}" loading="lazy">`;
             projectGallery.appendChild(galleryItem);
         });
-        
+
         projectModal.classList.add('show');
         document.body.style.overflow = 'hidden';
     }
@@ -689,7 +696,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (closeModal) {
         closeModal.addEventListener('click', closeProjectModal);
     }
-    
+
     if (projectModal) {
         projectModal.addEventListener('click', (e) => {
             if (e.target === projectModal) {
