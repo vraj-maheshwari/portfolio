@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemap for your GitHub Pages portfolio
+Sitemap: https://vraj-maheshwari.github.io/portfolio/sitemap.xml
+
